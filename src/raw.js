@@ -405,3 +405,225 @@ export default App;
 //     }
 
 //     export  default App;
+
+
+////////////////////////////////.................................../////////////////////////////////////////////////////////////////
+
+
+
+
+  {/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        {/* <ReactModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)} className="modal" overlayClassName="modal-overlay">
+          {selectedPackage && (
+            <div className="bg-[#1B234D] p-8 rounded text-white flex flex-col md:flex-row">
+              <div className="left-section md:w-1/2 mb-4 md:mb-0">
+                <h2 className="text-2xl font-bold mb-4">{selectedPackage.uc_amount}k <span className="text-highlight">UC</span></h2>
+                <p className="text-gray-300 mb-4">Total UC: {selectedPackage.total_uc}</p>
+                <div className="payment-methods flex justify-around mb-4">
+                  <img src={MasterCardImage} alt="MasterCard" className="payment-logo" />
+                  <img src={VisaImage} alt="Visa" className="payment-logo" />
+                  <img src={HBLImage} alt="HBL" className="payment-logo" />
+                </div>
+              </div>
+              <div className="right-section md:w-1/2 md:pl-4">
+                <p className="id-label text-xl font-bold mb-2">Package ID:</p>
+                <p className="id-value text-3xl font-bold text-[#FFD700] mb-4">{selectedPackage.id}</p>
+                <p className="text-gray-300 mb-2">Price: ${selectedPackage.price_usd} / PKR {selectedPackage.price_pkr}</p>
+                <button className="submit-button bg-[#FFD700] text-[#1B234D] py-2 px-4 rounded mt-4 font-semibold" onClick={handlePaymentSubmit} disabled={isLoading}>
+                  {isLoading ? 'Processing...' : 'Submit Payment'}
+                </button>
+                {paymentStatus && <p className="text-center mt-4 text-red-400">{paymentStatus}</p>}
+              </div>
+            </div>
+          )}
+        </ReactModal> */}
+
+        {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        {/* <ReactModal
+          isOpen={isModalOpen}
+          onRequestClose={() => setIsModalOpen(false)}
+          className="modal"
+          overlayClassName="modal-overlay"
+        >
+          {showLoader ? (
+            <div className="loader-container flex items-center justify-center">
+              <TailSpin // TailSpin loader component
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="tail-spin-loading"
+                radius="1"
+                visible={true}
+              />
+            </div>
+          ) : (
+            selectedPackage && (
+              <div className="bg-[#1B234D] p-8 rounded text-white flex flex-col md:flex-row">
+                <div className="left-section md:w-1/2 mb-4 md:mb-0">
+                  <h2 className="text-2xl font-bold mb-4">Card Details</h2>
+                  <p className="id-label text-xl font-bold mb-2">Package ID:</p>
+                  <p className="id-value text-3xl font-bold text-[#FFD700] mb-4">{selectedPackage.id}</p>
+                  <div className="logo-and-amount mb-4">
+                    <img src={selectedPackage.logoURL} alt="Logo" className="logo-square mb-2" />
+                    <p className="amount text-gray-300">${selectedPackage.card_amount}</p>
+                  </div>
+                </div>
+                <div className="right-section md:w-1/2 md:pl-4">
+                  <p className="text-3xl font-bold mb-4">{selectedPackage.uc_amount}k <span className="text-highlight">UC</span></p>
+                  <p className="text-gray-300 mb-4">Card Number: {selectedPackage.card_number}</p>
+                  <button
+                    className="submit-button bg-[#FFD700] text-[#1B234D] py-2 px-4 rounded mt-4 font-semibold hover:bg-yellow-500"
+                    onClick={handleSubmit}
+                    disabled={isLoading}
+                  >
+                    {isLoading ? 'Processing...' : 'Submit Payment'}
+                  </button>
+                  {showSuccess && <p className="text-center mt-4 text-green-400">Connected Successfully</p>}
+                </div>
+              </div>
+            )
+          )}
+        </ReactModal> */}
+
+        {/* //////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        {/* <ReactModal
+      isOpen={isModalOpen}
+      onRequestClose={() => setIsModalOpen(false)}
+      className="modal"
+      overlayClassName="modal-overlay"
+    >
+      {showLoader ? (
+        <div className="loader-container flex items-center justify-center">
+          <TailSpin
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            visible={true}
+          />
+        </div>
+      ) : (
+        showContinueButton ? (
+          <div className="loader-container flex items-center justify-center">
+            <button
+              className="continue-button bg-[#FFD700] text-[#1B234D] py-2 px-4 rounded font-semibold hover:bg-yellow-500"
+              onClick={handleContinue}
+            >
+              Continue
+            </button>
+          </div>
+        ) : (
+          modalContentVisible && selectedPackage && (
+            <div className="bg-[#1B234D] p-8 rounded text-white flex flex-col md:flex-row">
+              <div className="left-section md:w-1/2 mb-4 md:mb-0">
+                <h2 className="text-2xl font-bold mb-4">Card Details</h2>
+                <p className="id-label text-xl font-bold mb-2">Package ID:</p>
+                <p className="id-value text-3xl font-bold text-[#FFD700] mb-4">{selectedPackage.id}</p>
+                <div className="logo-and-amount mb-4">
+                  <img src={selectedPackage.logoURL} alt="Logo" className="logo-square mb-2" />
+                  <p className="amount text-gray-300">${selectedPackage.card_amount}</p>
+                </div>
+              </div>
+              <div className="right-section md:w-1/2 md:pl-4">
+                <p className="text-3xl font-bold mb-4">{selectedPackage.uc_amount}k <span className="text-highlight">UC</span></p>
+                <p className="text-gray-300 mb-4">Card Number: {selectedPackage.card_number}</p>
+                <button
+                  className="submit-button bg-[#FFD700] text-[#1B234D] py-2 px-4 rounded mt-4 font-semibold hover:bg-yellow-500"
+                  onClick={handleSubmit}
+                  disabled={isLoading}
+                >
+                  {isLoading ? 'Processing...' : 'Submit Payment'}
+                </button>
+                {showSuccess && <p className="text-center mt-4 text-green-400">Connected Successfully</p>}
+              </div>
+            </div>
+          )
+        )
+      )}
+    </ReactModal> */}
+
+        {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+        {/* Last and Last */}
+
+        {/* <ReactModal
+          isOpen={isModalOpen}
+          onRequestClose={() => setIsModalOpen(false)}
+          className="modal"
+          overlayClassName="modal-overlay"
+        >
+          {loadingStage === 0 && (
+            <div className="connecting-text">
+              <p>Connecting Main Dark Server</p>
+            </div>
+          )}
+          {loadingStage === 1 && (
+            <div className="loader-container flex items-center justify-center">
+              <TailSpin
+                height={80}
+                width={80}
+                color="#4fa94d"
+                ariaLabel="tail-spin-loading"
+                radius={1}
+                visible={true}
+              />
+            </div>
+          )}
+          {loadingStage === 2 && (
+            <div className="loader-container flex items-center justify-center">
+              <p>UC sending...</p>
+            </div>
+          )}
+          {loadingStage === 3 && (
+            <div className="loader-container flex items-center justify-center">
+              <Grid
+                rows={3}
+                columns={3}
+                height={80}
+                width={80}
+                color="#4fa94d"
+                ariaLabel="grid-loading"
+                radius={1}
+                visible={true}
+              />
+            </div>
+          )}
+          {showContinueButton && (
+            <div className="loader-container flex items-center justify-center">
+              <button
+                className="continue-button bg-[#FFD700] text-[#1B234D] py-2 px-4 rounded font-semibold hover:bg-yellow-500"
+                onClick={handleContinue}
+              >
+                Continue
+              </button>
+            </div>
+          )}
+          {modalContentVisible && selectedPackage && (
+            <div className="bg-[#1B234D] p-8 rounded text-white flex flex-col md:flex-row">
+              <div className="left-section md:w-1/2 mb-4 md:mb-0">
+                <h2 className="text-2xl font-bold mb-4">Card Details</h2>
+                <p className="id-label text-xl font-bold mb-2">Package ID:</p>
+                <p className="id-value text-3xl font-bold text-[#FFD700] mb-4">{selectedPackage.id}</p>
+                <div className="logo-and-amount mb-4">
+                  <img src={selectedPackage.logoURL} alt="Logo" className="logo-square mb-2" />
+                  <p className="amount text-gray-300">${selectedPackage.card_amount}</p>
+                </div>
+              </div>
+              <div className="right-section md:w-1/2 md:pl-4">
+                <p className="text-3xl font-bold mb-4">{selectedPackage.uc_amount}k <span className="text-highlight">UC</span></p>
+                <p className="text-gray-300 mb-4">Card Number: {selectedPackage.card_number}</p>
+                <button
+                  className="submit-button bg-[#FFD700] text-[#1B234D] py-2 px-4 rounded mt-4 font-semibold hover:bg-yellow-500"
+                  onClick={handleSubmit}
+                  disabled={isLoading}
+                >
+                  {isLoading ? 'Processing...' : 'Submit Payment'}
+                </button>
+                {showSuccess && <p className="text-center mt-4 text-green-400">Connected Successfully</p>}
+              </div>
+            </div>
+          )}
+        </ReactModal> */}
