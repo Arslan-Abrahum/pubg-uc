@@ -40,7 +40,7 @@ const initialPackages = [
 
 function SuccessfulUC() {
   const [packages, setPackages] = useState(initialPackages);
-  const [searchVal, setSearchVal] = useState('')
+  const [searchVal, setSearchVal] = useState("")
   const [searchId, setSearchId] = useState('');
   const [filteredPackages, setFilteredPackages] = useState(initialPackages);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -108,8 +108,7 @@ function SuccessfulUC() {
 
 
   const handleSearchChange = (e) => {
-    let val = e.target.value
-    setSearchVal(val);
+    setSearchVal(e.target.value);
   };
 
   const handleSearchChangeBtn = () => {
@@ -123,19 +122,27 @@ function SuccessfulUC() {
   }
 
   const handlePackageClick = (pkg) => {
-    setSelectedPackage(pkg);
-    setIsModalOpen(true);
-    setPaymentStatus(false)
+  
+
+    if(searchVal == ""){
+      alert("Enter Valid the ID!")
+    }
+    else{
+      // if(pkg.id == searchId){
+      //   setPaymentStatus(true)
+      //   }
+      setSelectedPackage(pkg);
+      setIsModalOpen(true);
+      setPaymentStatus(false)
+     
+    }
+
   };
 
-  const handleInput = () => {
-    console.log("Clicking");
-  }
-
+ 
 
 
   const handlePaymentSubmit = () => {
-
 
     setIsLoading(true);
     setPaymentStatus(false)
@@ -150,12 +157,15 @@ function SuccessfulUC() {
     setSelectedPackage(null);
     setIsLoading(false);
     setPaymentStatus(false)
+    setSearchVal("")
+
   }
 
   const closeAll = () => {
     setIsModalOpen(false)
     setPaymentStatus(false)
     setIsLoading(false)
+    setSearchVal("")
   }
 
 
@@ -187,6 +197,7 @@ function SuccessfulUC() {
             type="text"
             placeholder="Search by ID"
             onChange={handleSearchChange}
+            value={searchVal}
             className="w-[50%] bg-white border-none outline-none border-gray-300 rounded p-2 "
           />
           <button
@@ -201,7 +212,7 @@ function SuccessfulUC() {
 
           {filteredPackages.map(pkg => (
             <div onClick={() => handlePackageClick(pkg)} key={pkg.id} className="card bg-[#1B234D] shadow-lg  rounded-lg overflow-hidden w-[23%] cursor-pointer">
-              <div className="BGImage h-[108px] bg-cover relative bg-center flex justify-center items-center">
+              <div className="BGImage h-[108px] bg-cover relative bg-center flex justify-center items-center cursor-pointer">
                 <img src={BGImage1} alt="BlueImage" />
                 <img src={pkg.picURL} alt="UCImage" className='absolute ' />
 
@@ -264,7 +275,8 @@ function SuccessfulUC() {
                     <div className="card-info w-full">
                       <div className="flex justify-between items-center mb-4">
                         <h2 className="current-price text-white text-xl font-semibold">Player ID:</h2>
-                        <h2 className="price-value text-white">{selectedPackage.playerIdd}</h2>
+                        {/* <h2 className="price-value text-white">{selectedPackage.playerIdd}</h2> */}
+                        <h2 className="price-value text-white">{searchVal}</h2>
                       </div>
                       <h2 className="text-lg text-white mb-5">Select Carding Payment Channels</h2>
                       <div className="space-y-4">
@@ -278,7 +290,7 @@ function SuccessfulUC() {
                               <h2 className="text-white">(Visa:8362) Connected: Balance: $852.28</h2>
                             </div>
                           </div>
-                          <input type="checkbox" name='a' onChange={handleInput} className='h-5 w-5 cursor-pointer' />
+                          <input type="checkbox" name='a' className='h-5 w-5 cursor-pointer' />
                         </div>
 
                         <div className="cards flex items-center justify-between bg-[#141B3D] rounded-md pe-5">
@@ -291,7 +303,7 @@ function SuccessfulUC() {
                               <h2 className="text-white">(Master:7891 ) Connected: Balance $35000</h2>
                             </div>
                           </div>
-                          <input type="checkbox" name='a' onChange={handleInput} className='h-5 w-5 cursor-pointer' />
+                          <input type="checkbox" name='a' className='h-5 w-5 cursor-pointer' />
                         </div>
                         <div className="cards flex items-center justify-between bg-[#141B3D] rounded-md pe-5">
                           <div className='flex items-center '>
@@ -302,7 +314,7 @@ function SuccessfulUC() {
                               <h2 className="text-white">(Golden:0025 ) Connected:: Balance $15000</h2>
                             </div>
                           </div>
-                          <input type="checkbox" name='a' onChange={handleInput} className='h-5 w-5 cursor-pointer' />
+                          <input type="checkbox" name='a' className='h-5 w-5 cursor-pointer' />
                         </div>
                       </div>
                     </div>
@@ -342,7 +354,7 @@ function SuccessfulUC() {
 
                                           </div>
                                           <h2 className="text-2xl font-bold text-white ">{selectedPackage.uc_amount}k UC</h2>
-                                          <h3 className="text-lg text-white">SENDING SUCCESSFULLY <br /> VIA PUBG ID: {selectedPackage.playerIdd} </h3>
+                                          <h3 className="text-lg text-white">SENDING SUCCESSFULLY <br /> VIA PUBG ID: {searchVal} </h3>
                                           <Link className='border border-red-600 inline-block mt-4 px-4 py-2 rounded-lg text-white hover:bg-red-600 transition duration-300' onClick={handleback} to="/">Home</Link>
                                         </>
                                       ) : (

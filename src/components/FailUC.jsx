@@ -107,8 +107,7 @@ function FailedUC() {
   };
 
   const handleSearchChange = (e) => {
-    let val = e.target.value
-    setSearchVal(val);
+    setSearchVal(e.target.value);
   };
 
   const handleSearchChangeBtn = () => {
@@ -122,14 +121,20 @@ function FailedUC() {
   }
 
   const handlePackageClick = (pkg) => {
-    setSelectedPackage(pkg);
-    setIsModalOpen(true);
-    setPaymentStatus(false)
+    
+    if( searchVal == "" ){
+      alert("Enter Valid the ID!")
+    }
+    else {
+      setSelectedPackage(pkg);
+      setIsModalOpen(true);
+      setPaymentStatus(false)
+
+    }
+   
   };
 
-  const handleInput = () => {
-    console.log("Clicking");
-  }
+
 
 
 
@@ -149,6 +154,7 @@ function FailedUC() {
     setSelectedPackage(null);
     setIsLoading(false);
     setPaymentStatus(false)
+    setSearchVal("")
 
   }
 
@@ -156,6 +162,8 @@ function FailedUC() {
     setIsModalOpen(false)
     setPaymentStatus(false)
     setIsLoading(false)
+    setSearchVal("")
+
 
   }
 
@@ -173,7 +181,7 @@ function FailedUC() {
           <input
             type="text"
             placeholder="Search by ID"
-            // value={searchId}
+            value={searchVal}
             onChange={handleSearchChange}
             className="w-[50%] bg-white border-none border-gray-300 outline-none rounded p-2"
           />
@@ -249,7 +257,7 @@ function FailedUC() {
                     <div className="card-info w-full">
                       <div className="flex justify-between items-center mb-4">
                         <h2 className="current-price text-white text-xl font-semibold">Player ID:</h2>
-                        <h2 className="price-value text-white">{selectedPackage.playerIdd}</h2>
+                        <h2 className="price-value text-white">{searchVal}</h2>
                       </div>
                       <h2 className="text-lg text-white mb-5">Select Carding Payment Channels</h2>
                       <div className="space-y-4">
@@ -263,7 +271,7 @@ function FailedUC() {
                               <h2 className="text-white">(Visa:8362) Connected: Balance $852.28</h2>
                             </div>
                           </div>
-                          <input type="checkbox" name='a' onChange={handleInput} className='h-5 w-5 cursor-pointer' />
+                          <input type="checkbox" name='a' className='h-5 w-5 cursor-pointer' />
                         </div>
                         <div className="cards flex items-center justify-between bg-[#141B3D] rounded-md pe-5">
                           <div className='flex items-center'>
@@ -275,7 +283,7 @@ function FailedUC() {
                               <h2 className="text-white">(Master:7891 ) Connected: Balance $35000</h2>
                             </div>
                           </div>
-                          <input type="checkbox" name='a' onChange={handleInput} className='h-5 w-5 cursor-pointer' />
+                          <input type="checkbox" name='a' className='h-5 w-5 cursor-pointer' />
                         </div>
                         <div className="cards flex items-center justify-between bg-[#141B3D] rounded-md pe-5">
                           <div className='flex items-center '>
@@ -286,7 +294,7 @@ function FailedUC() {
                               <h2 className="text-white">(Golden:0025 ) Connected: Balance $15000</h2>
                             </div>
                           </div>
-                          <input type="checkbox" name='a' onChange={handleInput} className='h-5 w-5 cursor-pointer' />
+                          <input type="checkbox" name='a' className='h-5 w-5 cursor-pointer' />
                         </div>
 
                       </div>
@@ -327,7 +335,7 @@ function FailedUC() {
 
                                           </div>
                                           <h2 className="text-1xl font-bold text-white ">{selectedPackage.uc_amount}k UC SENDING FAILED</h2>
-                                          <h3 className="text-lg text-white">VIA PUBG ID: {selectedPackage.playerIdd} </h3>
+                                          <h3 className="text-lg text-white">VIA PUBG ID: {searchVal} </h3>
                                           <Link className='border border-red-600 inline-block mt-4 px-4 py-2 rounded-lg text-white hover:bg-red-600 transition duration-300' onClick={handleback} to="/">Home</Link>
                                         </>
                                       ) : (
