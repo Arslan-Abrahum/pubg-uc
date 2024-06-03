@@ -378,21 +378,7 @@ function SuccessfulUC() {
           }
         </ReactModal>
       </div>
-      {/* <div className="flex flex-col items-center justify-center text-center h-[90vh] w-[15%] rounded-lg">
-        <div className='h-auto w-[90%] bg-[#1B234D] p-2 pb-10  flex flex-col justify-center items-center' >
-          <img src={VisaGolden} className='clr-gold h-auto mb-5 w-full rounded-lg' alt="" />
-          <div className='h- w-full bg-[#141B3D] p-1'>
-            <h3 className=' text-white text-shadow font-semibold text-2xl'>( Golden:0025 ) Connected: Balance $15000</h3>
-          </div>
-        </div>
-        <div className='h-auto w-[90%] bg-[#1B234D] p-2 flex flex-col justify-center items-center' >
-          <img src={VisaWhite} className='clr-silver h-auto mb-10 w-full rounded-lg' alt="" />
-          <div className='w-full bg-[#141B3D] p-1'>
-            <h3 className='text-white text-shadow font-semibold text-2xl'>( Silver:8362 ) <br /> Connected: <br /> Balance $852282</h3>
-          </div>
-        </div>
-
-      </div> */}
+     
 
     </div>
   );

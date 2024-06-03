@@ -163,21 +163,7 @@ function FailedUC() {
 
   return (
     <div className="h-auto bg-[rgb(20,27,61)] min-h-screen p-2 flex justify-around items-center">
-       {/* <div className="flex flex-col items-center justify-center text-center h-[90vh] w-[15%] bg-[rgb(20,27,61)]">
-        <div className='h-auto w-[90%] bg-[#1B234D] p-2  flex flex-col justify-center items-center' >
-          <img src={MasterCard} className='h-auto w-full rounded-lg' alt="" />
-          <div className='h- w-full bg-[#141B3D] p-1'>
-            <h3 className='text-white text-shadow font-semibold text-2xl'>( Master:7891 ) <br /> Connected: <br /> Balance $35000</h3>
-          </div>
-        </div>
-        <div className='h-auto w-[90%] bg-[#1B234D] p-2 flex flex-col justify-center items-center' >
-          <img src={VisaCard} className='h-auto w-full rounded-lg' alt="" />
-          <div className='h- w-full bg-[#141B3D] p-1'>
-            <h3 className='text-white text-shadow font-semibold text-2xl'>( Visa:8362 ) <br /> Connected: <br /> Balance $852282</h3>
-          </div>
-        </div>
-
-      </div> */}
+      
       <div className="h-[auto] w-[1000px] setting-main flex items-center flex-col justify-center bg-[#171F45] mx-auto my-5 p-7">
         <h1 class="text-3xl font-bold text-center mt-2 text-red-500 mb-1 text-shadow">Dark Server Carding UC</h1>
         <h1 className="text-2xl font-semibold text-center mb-2 text-white">Midasbuy Connected Successfully</h1>
@@ -377,21 +363,7 @@ function FailedUC() {
         </ReactModal>
       </div>
       
-      {/* <div className="flex flex-col items-center justify-center text-center h-[90vh] w-[15%] rounded-lg">
-        <div className='h-auto w-[90%] bg-[#1B234D] p-2 pb-10  flex flex-col justify-center items-center' >
-          <img src={VisaGolden} className='clr-gold h-auto mb-5 w-full rounded-lg' alt="" />
-          <div className='h- w-full bg-[#141B3D] p-1'>
-            <h3 className=' text-white text-shadow font-semibold text-2xl'>( Golden:0025 ) Connected: Balance $15000</h3>
-          </div>
-        </div>
-        <div className='h-auto w-[90%] bg-[#1B234D] p-2 flex flex-col justify-center items-center' >
-          <img src={VisaWhite} className='clr-silver h-auto mb-10 w-full rounded-lg' alt="" />
-          <div className='w-full bg-[#141B3D] p-1'>
-            <h3 className='text-white text-shadow font-semibold text-2xl'>( Silver:8362 ) <br /> Connected: <br /> Balance $852282</h3>
-          </div>
-        </div>
-
-      </div> */}
+     
     </div>
   );
 }
