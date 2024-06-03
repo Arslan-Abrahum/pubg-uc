@@ -207,7 +207,7 @@ function FailedUC() {
                     <img src={UCImage} alt="Logo" className="w-12 h-12" />
                   </div>
                   <div className="uc-package-value text-center">
-                    <h1 className="package-text text-3xl font-bold text-white"> ${pkg.uc_amount}k <span className="text-highlight"> UC </span> </h1>
+                    <h1 className="package-text text-3xl font-bold text-white"> {pkg.uc_amount}k <span className="text-highlight"> UC </span> </h1>
                   </div>
                 </div>
               </div>
