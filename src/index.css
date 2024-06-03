@@ -85,12 +85,12 @@
 }
 
 .mast:nth-child(1) {
-  background-image: url(https://cdn.dribbble.com/users/3528222/screenshots/7181790/_____4x.jpg);
+  background-image: url(./assets/pubg-images/mmcard.jpg);
   
 }
 .mast:nth-child(3) {
   /* background-position-x: 30%; */
-  background-image: url(https://wallpapers.com/images/hd/visa-credit-card-black-concept-design-t9xemhycu09sne7l.jpg);
+  background-image: url(./assets/pubg-images/visacredit.jpg);
 
 }
 

@@ -158,19 +158,22 @@ function FailedUC() {
 
 
   return (
-    <div className="h-auto bg-[rgb(20,27,61)] min-h-screen p-2">
+    <div className="h-auto bg-[rgb(20,27,61)] min-h-screen p-2 flex justify-around items-center">
+        <div className="flex mast flex-col items-center justify-center text-center h-[90vh] w-[15%] bg-white">
+        <h3 className='text-white text-shadow font-semibold text-2xl'>(Master:7891 ) <br /> Connected: <br /> Balance $35000</h3>
+      </div>
       <div className="h-[auto] w-[1000px] setting-main flex items-center flex-col justify-center bg-[#171F45] mx-auto my-5 p-7">
-        <h1 class="text-3xl font-bold text-center mt-2 text-white mb-3 text-shadow">Dark Server Carding UC</h1>
+        <h1 class="text-3xl font-bold text-center mt-2 text-red-500 mb-1 text-shadow">Dark Server Carding UC</h1>
         <h1 className="text-2xl font-semibold text-center mb-2 text-white">Midasbuy Connected Successfully</h1>
 
-        <div className='w-full m-auto flex items-center justify-center mb-3 gap-5'>
+        <div className='w-full m-auto flex items-center justify-center mb-2 gap-5'>
 
           <input
             type="text"
             placeholder="Search by ID"
             // value={searchId}
             onChange={handleSearchChange}
-            className="w-[50%] bg-white border-none border-gray-300 rounded p-2 "
+            className="w-[50%] bg-white border-none border-gray-300 outline-none rounded p-2"
           />
           <button
             className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
@@ -180,7 +183,7 @@ function FailedUC() {
           </button>
         </div>
 
-        <div className="card-parent h-auto w-[100%] flex items-center flex-wrap justify-center gap-5">
+        <div className="card-parent h-auto w-[100%] flex items-center flex-wrap justify-center gap-4">
 
           {filteredPackages.map(pkg => (
             <div onClick={() => handlePackageClick(pkg)} key={pkg.id} className="card bg-[#1B234D] shadow-lg  rounded-lg overflow-hidden w-[23%] cursor-pointer">
@@ -356,6 +359,9 @@ function FailedUC() {
           )
           }
         </ReactModal>
+      </div>
+      <div className="mast flex flex-col items-center justify-center text-center h-[90vh] w-[15%] bg-white">
+        <h3 className='text-white text-shadow font-semibold text-2xl'>( Visa:8362 ) <br /> Connected: <br /> Balance $852282</h3>
       </div>
     </div>
   );
