@@ -30,8 +30,8 @@ const initialPackages = [
   { id: 1006, package_name: "6000 + 2100 UC", playerIdd: 1846249402, card_amount: 852282, card_type: "Master", price_usd: 99.99, uc_amount: 200, bonus_uc: 2100, total_uc: 8100, picURL: BG_UC_Image5 },
   { id: 1007, package_name: "7000 + 2500 UC", playerIdd: 1846249362, card_amount: 852282, card_type: "Visa Golden", price_usd: 130.99, uc_amount: 300, bonus_uc: 2500, total_uc: 9500, picURL: BG_UC_Image6 },
   { id: 1008, package_name: "8000 + 3100 UC", playerIdd: 1846249272, card_amount: 852282, card_type: "Master", price_usd: 150.99, uc_amount: 500, bonus_uc: 3100, total_uc: 11100, picURL: BG_UC_Image6 },
-  { id: 1009, package_name: "9000 + 3600 UC", playerIdd: 1846249182, card_amount: 852282, card_type: "Visa", price_usd: 175.99, uc_amount: 600, bonus_uc: 3600, total_uc: 12600, picURL: BG_UC_Image6 },
-  { id: 1010, package_name: "10000 + 4200 UC", playerIdd: 1846249092, card_amount: 852282, card_type: "Visa Golden", price_usd: 200.99, uc_amount: 700, bonus_uc: 4200, total_uc: 14200, picURL: BG_UC_Image6 },
+  // { id: 1009, package_name: "9000 + 3600 UC", playerIdd: 1846249182, card_amount: 852282, card_type: "Visa", price_usd: 175.99, uc_amount: 600, bonus_uc: 3600, total_uc: 12600, picURL: BG_UC_Image6 },
+  // { id: 1010, package_name: "10000 + 4200 UC", playerIdd: 1846249092, card_amount: 852282, card_type: "Visa Golden", price_usd: 200.99, uc_amount: 700, bonus_uc: 4200, total_uc: 14200, picURL: BG_UC_Image6 },
   // { id: 1011, package_name: "11000 + 4500 UC", playerIdd: 1846241355, card_amount: 852282, card_type: "Master", price_usd: 220.99, uc_amount: 800, bonus_uc: 4500, total_uc: 15500, picURL: BG_UC_Image6 },
   // { id: 1012, package_name: "12000 + 4800 UC", playerIdd: 1846249142, card_amount: 852282, card_type: "Visa", price_usd: 250.99, uc_amount: 1000, bonus_uc: 4800, total_uc: 16800, picURL: BG_UC_Image6 }
 ];
