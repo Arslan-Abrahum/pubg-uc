@@ -20,6 +20,7 @@ import UCImage1 from "../assets/pubg-images/uc-small.bc30c95b.png"
 import Globe from "../assets/pubg-images/globe-image.png"
 import UCImage from "../assets/pubg-images/uc-small.bc30c95b.png"
 import TickImage from "../assets/pubg-images/tick-mark-icon.webp"
+import Verified from "../assets/pubg-images/WhatsApp_Image_2024-08-10_at_09.32.35_cd8914d3-removebg-preview.png"
 
 
 const initialPackages = [
@@ -122,24 +123,24 @@ function SuccessfulUC() {
   }
 
   const handlePackageClick = (pkg) => {
-  
 
-    if(searchVal == ""){
+
+    if (searchVal == "") {
       alert("Enter Valid the ID!")
     }
-    else{
+    else {
       // if(pkg.id == searchId){
       //   setPaymentStatus(true)
       //   }
       setSelectedPackage(pkg);
       setIsModalOpen(true);
       setPaymentStatus(false)
-     
+
     }
 
   };
 
- 
+
 
 
   const handlePaymentSubmit = () => {
@@ -187,8 +188,13 @@ function SuccessfulUC() {
         </div>
 
       </div> */}
-      <div className="h-[auto] w-[1000px] setting-main flex items-center flex-col justify-center bg-[#171F45] mx-auto my-5 p-7">
-        <h1 className="text-3xl font-bold text-center mt-2 text-red-500 mb-1 text-shadow">Dark Server Carding UC</h1>
+      <div className="h-[auto] w-[1000px] setting-main flex items-center flex-col justify-center bg-[#171F45] mx-auto my-5">
+        <div className="h-[auto] w-[1000px] setting-main mx-auto p-4">
+          <h1 class="text-xl mt-2 text-white flex">Dark Web to Verified <img className='h-[35px] w-[55px]' src={Verified} alt="Image Verify" /></h1>
+
+        </div>
+        <h1 class="text-3xl font-bold text-center text-red-500 mb-1 text-shadow">Dark Server Carding UC</h1>
+
         <h1 className="text-2xl font-semibold text-center mb-2 text-white">Midasbuy Connected Successfully</h1>
 
         <div className='w-full m-auto flex items-center justify-center mb-2 gap-5'>
@@ -390,7 +396,7 @@ function SuccessfulUC() {
           }
         </ReactModal>
       </div>
-     
+
 
     </div>
   );

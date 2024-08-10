@@ -24,6 +24,7 @@ import UCImage1 from "../assets/pubg-images/uc-small.bc30c95b.png"
 import CrossImage from "../assets/pubg-images/X-8.png"
 import UCImage from "../assets/pubg-images/uc-small.bc30c95b.png"
 import Globe from "../assets/pubg-images/globe-image.png"
+import Verified from "../assets/pubg-images/WhatsApp_Image_2024-08-10_at_09.32.35_cd8914d3-removebg-preview.png"
 
 const initialPackages = [
   { id: 1001, package_name: "60 + 30 UC", playerIdd: 1846249952, card_amount: 852282, card_type: "Master", price_usd: 0.99, uc_amount: 25, bonus_uc: 30, total_uc: 60, picURL: BG_UC_Image1 },
@@ -172,8 +173,12 @@ function FailedUC() {
   return (
     <div className="h-auto bg-[rgb(20,27,61)] min-h-screen p-2 flex justify-around items-center">
       
-      <div className="h-[auto] w-[1000px] setting-main flex items-center flex-col justify-center bg-[#171F45] mx-auto my-5 p-7">
-        <h1 class="text-3xl font-bold text-center mt-2 text-red-500 mb-1 text-shadow">Dark Server Carding UC</h1>
+      <div className="h-[auto] w-[1000px] setting-main flex items-center flex-col justify-center bg-[#171F45] mx-auto my-5">
+      <div className="h-[auto] w-[1000px] setting-main mx-auto p-4">
+      <h1 class="text-xl mt-2 text-white flex">Dark Web to Verified <img className='h-[35px] w-[55px]' src={Verified} alt="Image Verify" /></h1>
+        
+      </div>
+        <h1 class="text-3xl font-bold text-center text-red-500 mb-1 text-shadow">Dark Server Carding UC</h1>
         <h1 className="text-2xl font-semibold text-center mb-2 text-white">Midasbuy Connected Successfully</h1>
 
         <div className='w-full m-auto flex items-center justify-center mb-2 gap-5'>
