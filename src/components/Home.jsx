@@ -10,7 +10,7 @@ function Home() {
     navigate("/sign-in");
   };
   return (
-    <div className="main h-screen w-full flex  flex-col  items-center justify-evenly">
+    <div className="main h-screen w-full flex  flex-col  items-center justify-center">
      <SignedOut>
         <SignInButton />
       </SignedOut>
@@ -21,12 +21,13 @@ function Home() {
             userButtonAvatarBox: {
               width: '10rem',
               height: '10rem',
+
             },
           },
         }}
         />
       </SignedIn>
-      <div className="container bg-[#1B234C] shadow-lg rounded-lg flex flex-col md:flex-row items-center justify-center p-6 h-auto max-w-xl ">
+      <div className="container bg-[#1B234C] shadow-lg mt-20 rounded-lg flex flex-col md:flex-row items-center justify-center p-6 h-auto max-w-xl ">
         <div className="section flex flex-col items-center md:w-1/2 mb-6 md:mb-0">
           <h1 className="text-3xl font-bold text-white mb-4 md:mb-8">Successful Section</h1>
           <Link to="/successfuluc" className='no-underline text-white'>
